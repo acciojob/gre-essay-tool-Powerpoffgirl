@@ -4,11 +4,18 @@ let wordCount = document.getElementById('wordCount');
 let button = document.getElementById('button');
 
 function countWords(){
-    console.log(evaluatedText.value);
-    const arr = evaluatedText.value.split(" ");
-    console.log(arr);
-    console.log(arr.length);
-    wordCount.innerText = arr.length;
+    if(evaluatedText.value === ""){
+        console.log("0");
+        wordCount.innerText = 0;
+    }
+    else{
+        const arr = evaluatedText.value.split(" ");
+        console.log(evaluatedText.value);
+        if(arr.length > 0){
+            console.log(arr.length);
+            wordCount.innerText = arr.length;
+        }
+    }
 }
 
 
